@@ -20,7 +20,6 @@
 	<div id="container">
 	
 		<h2>Create Person!</h2>
-		
 		<c:if test="${not empty message}"><div class="message green">${message}</div></c:if>
 		
 		<form:form modelAttribute="person">
@@ -69,7 +68,7 @@
 		$(document).ready(function() {
 			
 			$('#randomPerson').click(function() {
-				$.getJSON('/spring-mvc-request-mapping/api/person/random', function(person) {
+				$.getJSON('${pageContext.request.contextPath}/api/person/random', function(person) {
 					$('#personResponse').text(person.name + ', age ' + person.age);
 				});
 			});
