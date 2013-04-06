@@ -5,5 +5,12 @@
 
 .DS_Store
 
-bin/*
-build/*
+bin
+build
+
+.settings
+.gradle
+
+.classpath
+
+.project
